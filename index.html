@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SupplyChain AI + Blockchain</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>SupplyChain 🔗🤖</h1>
+      <p class="lead">AI-powered anomaly detection + immutable blockchain logging</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Add product checkpoint</h2>
+        <form id="record-form">
+          <label>Item ID</label>
+          <input id="itemId" placeholder="e.g., BATCH-2025-001" required />
+          <label>Metadata (JSON)</label>
+          <textarea id="metadata" placeholder='{"temp":24,"location":"Factory A","time":"2025-09-01T10:00Z"}' required></textarea>
+          <div class="actions">
+            <button type="submit" id="submitBtn">Analyze & Store</button>
+            <button type="button" id="clearBtn" class="ghost">Clear</button>
+          </div>
+        </form>
+        <div id="status" class="status"></div>
+      </section>
+
+      <section class="card small">
+        <h3>Latest result</h3>
+        <pre id="resultBox">No results yet</pre>
+      </section>
+    </main>
+
+    <footer>
+      <small>Demo build · Uses OpenAI + EVM testnet (local demo)</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
